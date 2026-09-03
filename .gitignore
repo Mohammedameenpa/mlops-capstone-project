@@ -1,10 +1,67 @@
-# Python-generated files
+# =========================
+# Python
+# =========================
 __pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+*.py[cod]
+*.pyo
 
-# Virtual environments
-.venv
+# =========================
+# Virtual Environment
+# =========================
+.venv/
+venv/
+env/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+
+# =========================
+# Testing / Linting
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# ML artifacts
+# =========================
+*.pkl
+*.joblib
+*.pickle
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# DVC cache
+# =========================
+.dvc/cache/
+
+# =========================
+# Generated processed data
+# =========================
+data/processed/
+

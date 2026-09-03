@@ -7,7 +7,15 @@ authors = [
     { name = "Mohammed Ameeen", email = "ameencrcr70@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+    "scikit-learn>=1.9.0",
+    "scipy>=1.18.1",
+    "seaborn>=0.13.2",
+]
 
 [project.scripts]
 mlops-capstone-project = "mlops_capstone_project:main"
