@@ -49,6 +49,8 @@ Thumbs.db
 *.pkl
 *.joblib
 *.pickle
+mlflow.db
+mlruns/
 
 # =========================
 # Logs
