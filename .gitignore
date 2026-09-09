@@ -1,0 +1,73 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# =========================
+# Virtual Environment
+# =========================
+.venv/
+venv/
+env/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+
+# =========================
+# Testing / Linting
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# ML artifacts
+# =========================
+*.pkl
+*.joblib
+*.pickle
+mlflow.db
+mlruns/
+
+# The production model is committed so the Docker build (Dockerfile COPY) and
+# API tests (tests/test_api.py) can access it in CI.
+!models/churn_model_logistic_regression.joblib
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# DVC cache
+# =========================
+.dvc/cache/
+
+# =========================
+# Generated processed data
+# =========================
+data/processed/
+
