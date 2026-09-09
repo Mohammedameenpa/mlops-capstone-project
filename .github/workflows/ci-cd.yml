@@ -82,8 +82,10 @@ jobs:
           service: ${{ vars.GCP_CLOUD_RUN_SERVICE }}
           region: ${{ vars.GCP_REGION }}
           image: ${{ env.IMAGE_NAME }}:${{ github.sha }}
-          # Publicly invocable endpoint (no auth). Omit this flag to require Cloud Run IAM authentication.
-          flags: --allow-unauthenticated
+          # Publicly invocable endpoint (no auth) on container port 8000,
+          # matching the Dockerfile EXPOSE/uvicorn CMD. Omit --allow-unauthenticated
+          # to require Cloud Run IAM authentication.
+          flags: --allow-unauthenticated --port=8000
 
       - name: Show deployed URL
         run: 'echo "Deployed: ${{ steps.deploy.outputs.url }}"'
