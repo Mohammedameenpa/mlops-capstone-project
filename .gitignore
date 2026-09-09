@@ -52,6 +52,10 @@ Thumbs.db
 mlflow.db
 mlruns/
 
+# The production model is committed so the Docker build (Dockerfile COPY) and
+# API tests (tests/test_api.py) can access it in CI.
+!models/churn_model_logistic_regression.joblib
+
 # =========================
 # Logs
 # =========================
