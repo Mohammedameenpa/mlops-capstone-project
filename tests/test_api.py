@@ -1,13 +1,18 @@
+import os
+
 import joblib
 import pytest
 
 from fastapi.testclient import TestClient
 
+MODEL_PATH = "models/churn_model_logistic_regression.joblib"
+
+# The app reads MODEL_PATH at import time. Point startup at the bundled model
+# so the lifespan does not depend on a local MLflow registry (absent in CI).
+os.environ["MODEL_PATH"] = MODEL_PATH
+
 from src.api.main import app
 from src.features.preprocess import prepare_features
-
-
-MODEL_PATH = "models/churn_model_logistic_regression.joblib"
 
 
 def _valid_features() -> dict:
